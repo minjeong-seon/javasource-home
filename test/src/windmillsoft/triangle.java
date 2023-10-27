@@ -1,4 +1,4 @@
-package windmeal;
+package windmillsoft;
 
 /*
  * 삼각형의 넓이 구하기

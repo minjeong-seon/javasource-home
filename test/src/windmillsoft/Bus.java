@@ -1,4 +1,4 @@
-package windmeal;
+package windmillsoft;
 
 /*
  * 사용자로부터 현재시간과 버스5대의 시간표 입력받기

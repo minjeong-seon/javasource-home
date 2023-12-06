@@ -7,7 +7,7 @@ package windmillsoft;
 
 import java.io.*;
 
-public class triangle {
+public class Triangle {
 	public static void main(String[] args) throws Exception{
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		// 삼각형의 밑변과 높이를 공백을 사이에 두고 입력받기

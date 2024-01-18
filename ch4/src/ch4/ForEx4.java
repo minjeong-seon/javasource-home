@@ -45,7 +45,7 @@ public class ForEx4 {
 		//별로 피라미드 쌓기
 		for (int i = 1; i < 6; i++) {
 			for (int j = 1; j <=i; j++) {  //j <=i; : 별을 몇 개씩 늘어놓을지
-				System.out.print("별");
+				System.out.print("하나");
 			}System.out.println();
 		}
 		

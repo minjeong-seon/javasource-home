@@ -24,7 +24,12 @@ public class StringEx2 {
 		System.out.println(str1.charAt(0));
 		System.out.println(str1.charAt(str1.length()-1));
 		
+		
+		
+		
 		String str3 = "자바 프로그래밍";
+		
+		
 		//str3 문자열에 '프'라는 문자가 포함되어 있는지 확인
 		int counter=0;
 		for (int i = 0; i < str3.length(); i++) {
@@ -33,6 +38,8 @@ public class StringEx2 {
 			}
 		}System.out.println(counter>0?"있음":"");
 		System.out.println("'프' 횟수: "+counter);
+		
+		
 		
 		//indexOf(int ch): 주어진 문자 ch가 문자열에 들어있는지 확인하고 위치를 리턴(못 찾으면 -1 리턴)
 		System.out.println("indexOf(int ch):"+str2.indexOf('o'));

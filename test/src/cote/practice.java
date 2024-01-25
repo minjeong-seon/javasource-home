@@ -3,9 +3,12 @@ package cote;
 //구구단 출력
 import java.text.Collator;
 import java.util.Arrays;
-import java.util.Collections;
-import java.util.List;
-import java.util.Locale;
+import java.util.Comparator;
+import java.util.LinkedHashMap;
+import java.util.Map;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 
 public class practice {
 public static void main(String[] args) {
@@ -68,7 +71,47 @@ public static void main(String[] args) {
 //	
 //	System.out.println(str);
 	
-	System.out.println(5/2);
+	
+	//프로그래머스 진료순서 정하기
+	//값이 큰 요소부터 차례로 1,2,3... 순위를 매겨 배열로 다시 출력
+	int[] emergency = {3, 76, 24};
+
+//	// 원래 배열 인덱스(위치)로 순위 매기기
+//    int[] ranks = IntStream.range(0, emergency.length)
+//            .boxed()
+//            .sorted((i, j) -> Integer.compare(emergency[j], emergency[i]))
+//            .mapToInt(i -> i + 1)
+//            .toArray();
+//
+//    System.out.println("순위 매기기: " + Arrays.toString(ranks));
+//
+//    // 배열 요소의 원래 위치 유지
+//    int[] result = IntStream.range(0, emergency.length)
+//            .boxed()
+//            .sorted((i, j) -> Integer.compare(ranks[i], ranks[j]))
+//            .mapToInt(i -> i+1)
+//            .toArray();
+
+	//희표좌ver. 초간단 코드
+	int[] answer = Arrays.stream(emergency)
+				.map(i -> Arrays.stream(emergency)
+										.boxed()	//각 요소를 Integer로 boxing
+										.sorted(Comparator.reverseOrder())	//내림차순 정렬
+										.collect(Collectors.toList())	//리스트로 수집
+										.indexOf(i)+1)	//현재 요소의 인덱스에 1을 더하기
+										.toArray();
+										
+		//*indexOf() : 주어진 괄호 안의 요소가 리스트/배열에서 처음으로 나타내는 인덱스를 찾아줌
+	System.out.println(Arrays.toString(answer));
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	}
 }
